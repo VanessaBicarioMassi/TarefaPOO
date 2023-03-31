@@ -6,13 +6,15 @@
 
 import java.util.Scanner;
 import java.util.Date;
+import java.io.File;
 
 public class Principal {
     public static void main(String[] args) {
         GerenciadorDeTarefas gerenciador = new GerenciadorDeTarefas(); // instancia da classe pra gerenciar as tarefas
         gerenciador.login();
         //menu de interacao de login de usuario
-        while (true) {
+        boolean loginValido = false;
+        while (!loginValido) {
         System.out.println("\nEscolha uma opção:");
         System.out.println("1. Login");
         System.out.println("2. Criar conta");
@@ -58,8 +60,8 @@ public class Principal {
             
                 
         
-        Scanner scanner = new Scanner(System.in); // instancia que vai ler o que o usuario digitar
-        int opcao = 0;
+        //Scanner leitor = new Scanner(System.in); // instancia que vai ler o que o usuario digitar
+        opcao = 0;
         // mostrar o menu de interacao do usuario e ler a entrada em opcao
         while (opcao != 5) { // o loop será executado ate o usuario escolher a opcao 5 (sair do programa)
             System.out.println("Selecione uma opção:");
