@@ -1,0 +1,66 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class GerenciadorTarefas {
+    private List<Tarefa> tarefasPendentes;
+    private List<Tarefa> tarefasConcluidas;
+    private String nomeUsuario;
+
+    public GerenciadorTarefas() {
+        this.tarefasPendentes = new ArrayList<>();
+        this.tarefasConcluidas = new ArrayList<>();
+        this.nomeUsuario = nomeUsuario;
+    }
+
+    // métodos de acesso às listas de tarefas
+    public List<Tarefa> getTarefasPendentes() {
+        return tarefasPendentes;
+    }
+
+    public List<Tarefa> getTarefasConcluidas() {
+        return tarefasConcluidas;
+    }
+    public void adicionarTarefa(Tarefa t) {
+        pendentes.add(t);
+    }
+    
+    public void concluirTarefa(Tarefa t) {
+        if (pendentes.contains(t)) {
+            pendentes.remove(t);
+            t.setStatus("concluída");
+            t.setDataConclusao(); // utiliza a data atual
+            concluidas.add(t);
+        } else {
+            System.out.println("Tarefa não encontrada na lista de pendentes.");
+        }
+    }
+    
+    public void exibirTarefasPendentes() {
+        System.out.println("Tarefas pendentes:");
+        for (Tarefa t : pendentes) {
+            System.out.println("- " + t.getTitulo() + " (" + t.getDescricao() + ")");
+        }
+        if (tarefasPendentes.size() == 0) {
+            System.out.println("Não há tarefas pendentes.");
+            return;
+        }
+    }
+    
+    public void exibirTarefasConcluidas() {
+        System.out.println("Tarefas concluídas:");
+        for (Tarefa t : concluidas) {
+            System.out.println("- " + t.getTitulo() + " (concluída em " + t.getDataConclusao() + ")");
+        }
+    }
+}
+
+
+   
+
+       
