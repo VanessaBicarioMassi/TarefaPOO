@@ -61,7 +61,7 @@ public void exibirTarefasConcluidas() {
             Tarefa tarefa = tarefasConcluidas.get(i);
             System.out.println((i + 1) + ". " + tarefa.getTitulo() + " - " + tarefa.getDescricao());
          }
-      }
+       } 
    }
 }
 
